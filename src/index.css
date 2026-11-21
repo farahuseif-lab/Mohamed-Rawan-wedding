@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  --espresso: #3A2D28;
+  --taupe-rose: #A48374;
+  --champagne: #CBAD8D;
+  --stone: #D1C7BD;
+  --linen: #EBE3DB;
+  --ivory: #F1EDE6;
+
+  --font-ar-calligraphy: 'Aref Ruqaa', 'Amiri', serif;
+  --font-ar-serif: 'Amiri', 'Lateef', serif;
+  --font-ar-sans: 'IBM Plex Sans Arabic', 'Amiri', sans-serif;
+  --font-en-serif: 'Cormorant Garamond', 'Amiri', Georgia, serif;
+  --font-en-script: 'Pinyon Script', 'Cormorant Garamond', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--ivory);
+  color: var(--espresso);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--ivory);
+  color: var(--espresso);
+  font-family: var(--font-ar-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-en-serif);
+}
+
+/* Cotton Paper Micro-Grain for Invitation Cards */
+.paper-texture {
+  background-color: #F1EDE6;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(203, 173, 141, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(164, 131, 116, 0.06) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+}
+
+/* Velvet Deep Espresso Sanctuary Paper (#3A2D28) */
+.forest-paper-texture {
+  background-color: #3A2D28;
+  background-image:
+    radial-gradient(ellipse at 50% 30%, rgba(164, 131, 116, 0.2) 0%, transparent 66%),
+    radial-gradient(ellipse at 50% 95%, rgba(28, 20, 17, 0.58) 0%, transparent 62%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* Typography Helpers */
+.font-ar-calligraphy {
+  font-family: var(--font-ar-calligraphy);
+}
+
+.font-ar-serif {
+  font-family: var(--font-ar-serif);
+}
+
+.font-ar-sans {
+  font-family: var(--font-ar-sans);
+}
+
+.font-en-serif {
+  font-family: var(--font-en-serif);
+}
+
+.font-en-script {
+  font-family: var(--font-en-script);
+}
+
+.tabular-figures {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3D Envelope Perspective & GPU-Composited Flap Physics */
+.envelope-stage {
+  perspective: 2000px;
+}
+
+.envelope-flap {
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.envelope-flap-wing {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Sculpted Espresso & Champagne-Bronze Wax Seal */
+.olive-wax-seal {
+  background: radial-gradient(
+    circle at 32% 28%,
+    #927364 0%,
+    #634D43 38%,
+    #3A2D28 78%,
+    #261D19 100%
+  );
+  box-shadow:
+    0 14px 28px -6px rgba(24, 17, 14, 0.72),
+    0 4px 10px rgba(24, 17, 14, 0.48),
+    inset 0 2px 3px rgba(235, 227, 219, 0.35),
+    inset 0 -4px 8px rgba(24, 17, 14, 0.72);
+}
+
+.wax-seal-inner-ring {
+  box-shadow:
+    inset 0 2px 5px rgba(24, 17, 14, 0.56),
+    0 1px 1px rgba(235, 227, 219, 0.26);
+}
+
+/* Soft Torn-Paper / Deckled Watercolor Edge Mask for Venue Illustration */
+.venue-watercolor-torn-mask {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 660' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='tornSoft' x='-5%25' y='-5%25' width='110%25' height='110%25'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3C/defs%3E%3Cpath filter='url(%23tornSoft)' fill='%23000' d='M26,28 Q62,18 98,27 T174,23 Q218,31 258,22 T340,26 Q388,19 432,27 T516,22 Q564,29 608,21 T692,26 Q738,18 784,26 T868,21 Q916,28 972,26 Q982,66 973,108 T979,188 Q971,234 978,278 T972,362 Q980,410 973,454 T978,538 Q971,586 974,634 Q932,642 890,634 T806,639 Q758,632 714,639 T628,633 Q580,641 536,634 T450,639 Q404,631 358,639 T274,633 Q226,641 182,633 T96,639 Q56,632 25,634 Q18,590 26,546 T20,464 Q28,418 21,372 T27,288 Q19,240 26,196 T21,114 Q28,70 26,28 Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 660' preserveAspectRatio='none'%3E%3Cdefs%3E%3Cfilter id='tornSoft' x='-5%25' y='-5%25' width='110%25' height='110%25'%3E%3CfeGaussianBlur stdDeviation='6.5'/%3E%3C/filter%3E%3C/defs%3E%3Cpath filter='url(%23tornSoft)' fill='%23000' d='M26,28 Q62,18 98,27 T174,23 Q218,31 258,22 T340,26 Q388,19 432,27 T516,22 Q564,29 608,21 T692,26 Q738,18 784,26 T868,21 Q916,28 972,26 Q982,66 973,108 T979,188 Q971,234 978,278 T972,362 Q980,410 973,454 T978,538 Q971,586 974,634 Q932,642 890,634 T806,639 Q758,632 714,639 T628,633 Q580,641 536,634 T450,639 Q404,631 358,639 T274,633 Q226,641 182,633 T96,639 Q56,632 25,634 Q18,590 26,546 T20,464 Q28,418 21,372 T27,288 Q19,240 26,196 T21,114 Q28,70 26,28 Z'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
